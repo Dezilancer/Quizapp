@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bodytag{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgcolor{
+    background-color: #edf6f9;
+}
+
+.darkbg{
+    background-color: #006d77;
+}
+
+.light{
+    background-color: #edf6f9;
+}
+
+.txtLight{
+    color: #edf6f9;
+}
+.txtDark{
+    color: #006d77;
+}
+
+.optBtn{
+    outline: none !important;
+    border: none !important;
+}
+
+.optBtn:hover{
+    background-color: rgb(4, 180, 4);
+    color: white;
+    outline: none !important;
+    border: none !important;
+}
+
+.firstPage{
+    background-color: #ffffff;
+    width: 100%;
+
+}
+
+.firstMain{
+    height: 100vh;
+    max-width: 800px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+button:disabled{
+    background-color: gray !important;
+}
+.option-radios input:checked{
+    background-color: #006d77;
+    color: white;
+}
+.message{
+    color: red;
+    text-align: center;
+    font-size: 1em;
+}
+
+
+ .labelquiz input:checked{
+    background-color: #006d77;
+    color: white;
+ }
+
+ .labelquiz:hover{
+      cursor: pointer;
+      background-color: #006d77;
+      color: white;
+
+
+  }
+
+
+  .editBtn:hover{
+      cursor: pointer;
+      color:red;
+
+  }
+
+  .closebtn:hover{
+      background-color: #018c99;
+      
+    }
+    .closebtn{
+        color: rgb(255, 255, 255);
+        background-color: #006d77;
+  }
+
+
+  .adminLoginPage{
+    background-color: #ffffff;
+    width: 70%;
+  }
+
+  .adminInp:focus{
+      border-style: none;
+    outline: none;
+    }

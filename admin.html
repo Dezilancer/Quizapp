@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+
+<body class="bgcolor row">
+
+    <div class="container col-md-8 col-lg-8 col-12 col-sm-12 my-5">
+        <div class="darkbg">
+            <h2 class="py-4 px-3 text-white fw-normal text-uppercase">Quiz Dashboard</h2>
+        </div>
+        <div class="bg-light p-3">
+            <div class="mb-5">
+                <label for="question">Question:</label>
+                <input class="w-100 py-2 px-3 mt-2" placeholder="Enter Question here" type="text" id="question">
+            </div>
+            <hr>
+
+            <div class="text-end mb-2 mt-4">
+                <button onclick="addOpt()" class="btn btn-outline-danger" id="addBtn">+</button>
+            </div>
+
+
+            <div id="optionsDiv" class="mt-2">
+                <div><label for="Op01">Option 1</label>
+
+                    <div class="d-flex justify-content-between align-items-center"><input onblur="toSelectList(this)"
+                            class="w-75 d-block mt-2 mb-4 py-2 px-3" type="text" id="Op01"><p class="me-4 editBtn" onclick="editOpt(this)">Edit</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <hr>
+
+            <div id="answerOptionsdiv">
+                <label for="answer01" class="mb-2">Correct answer:</label>
+                <select class="w-100 py-2 px-3" name="" id="answerSelect" onblur="checkval()"><option value="" selected disabled> Select Correct Answer </option>
+                </select>
+            </div>
+
+            <hr>
+
+            <div class="text-end">
+                <button id="addBtn" onclick="saveQuestion()" class="btn btn-outline-success py-2 px-4 mt-5 mb-2">
+                    Save</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBzA9z7lADP6qTZ2phGZgPFQ-Nu0z3_KT4",
+            authDomain: "generalquizapp.firebaseapp.com",
+            databaseURL: "https://generalquizapp-default-rtdb.firebaseio.com",
+            projectId: "generalquizapp",
+            storageBucket: "generalquizapp.appspot.com",
+            messagingSenderId: "793023062701",
+            appId: "1:793023062701:web:46fc120c9bc55d47985c24",
+            measurementId: "G-Z8MBW57VPD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
